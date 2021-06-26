@@ -3,18 +3,21 @@ package com.irostub;
 public class Px4_4 {
     public static void main(String[] args) {
         int result = 1;
-        int idx = 2;
-        int count = 0;
-        while (result < 100) {
-            if (idx % 2 == 0) {
-                result -= idx;
+        int i = 1;
+        while(true){
+            if (i % 2 == 0) {
+                result -= i;
             }
-            if (idx % 2 == 1) {
-                result += idx;
+
+            if (i % 2 == 1) {
+                result += i;
             }
-            idx++;
-            count++;
+
+            if (result > 100) {
+                break;
+            }
+            i++;
         }
-        System.out.println(count);
+        System.out.println("result = " + i);
     }
 }
